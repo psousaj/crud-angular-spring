@@ -22,6 +22,25 @@
         </td>
       </ng-container>
 
+      <!-- Action Columns -->
+      <ng-container matColumnDef="buttons">
+        <mat-header-cell *matHeaderCellDef>
+          <button mat-mini-fab (click)="onAdd()" color="accent" aria-label="Icon">
+            <mat-icon fontIcon="add" ></mat-icon>
+          </button>
+        </mat-header-cell>
+
+        <mat-cell *matCellDef="let course">
+          <button mat-icon-button color="primary" aria-label="Editar Curso">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" aria-label="Editar Curso">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
