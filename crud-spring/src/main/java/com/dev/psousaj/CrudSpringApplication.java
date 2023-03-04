@@ -22,6 +22,11 @@ public class CrudSpringApplication {
 			course.setName("Inicio Servidor");
 			course.setCategory("front-end");
 			repository.save(course);
+
+			// var course2 = new Course();
+			// course.setName("Outro curso");
+			// course.setCategory("front-end");
+			// repository.save(course2);
 		};
 	}
 }
